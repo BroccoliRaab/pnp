@@ -1,8 +1,6 @@
 #ifndef PNP_SCHED_H
 #define PNP_SCHED_H
 
-#include "pnp_platform.h"
-
 /*
  * Basic Threading model
  *

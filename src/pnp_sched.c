@@ -99,6 +99,7 @@ pnp_push_front(pnp_sched_task_t task)
     PNP_LOCK(front_lock);
     pnp_sched_front = pnp_sched_front - 1 + PNP_SCHED_TASK_MAX;
     pnp_sched_front %= PNP_SCHED_TASK_MAX;
+    pnp_sched_task_deque[pnp_sched_front] = task;
     pnp_sched_sz++;
     PNP_UNLOCK(front_lock);
 }
