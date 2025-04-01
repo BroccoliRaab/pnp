@@ -17,17 +17,12 @@
     ((uint32_t)((r) * 255.0)) << 24 ||\
     ((uint32_t)((g) * 255.0)) << 16 ||\
     ((uint32_t)((b) * 255.0)) << 8 
+
+#define PNP_MAX(a,b) (a<b?b:a)
+#define PNP_MIN(a,b) (b<a?b:a)
    
 typedef SDL_mutex * pnp_lock_t;
 typedef struct pnp_platform_ctx_s pnp_platform_ctx_t;
-
-struct pnp_platform_ctx_s
-{
-    SDL_Window *win;
-    SDL_Renderer *renderer;
-    SDL_Texture *render_target;
-
-};
 
 #elif PNP_TARGET_RP2350
 #include <stdint.h>
